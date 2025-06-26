@@ -1,8 +1,8 @@
 function getComputerChoice() {
-    let n = Math.random() * 3;
-    if (n < 1) {
+    let computerChoice = Math.random() * 3;
+    if (computerChoice < 1) {
         return "rock";
-    }   else if (n < 2) {
+    }   else if (computerChoice < 2) {
         return "paper";
     }   else {
         return "scissors";
@@ -10,12 +10,12 @@ function getComputerChoice() {
     } 
 
 function getHumanChoice() {
-    let n = prompt("Rock, paper or scissors?");
-    if (n.toLowerCase() === "rock") {
+    let humanChoice = prompt("Rock, paper or scissors?");
+    if (humanChoice.toLowerCase() === "rock") {
         return "rock";
-    }   else if (n.toLowerCase() === "paper") {
+    }   else if (humanChoice.toLowerCase() === "paper") {
         return "paper";
-    }   else if (n.toLowerCase() === "scissors") {
+    }   else if (humanChoice.toLowerCase() === "scissors") {
         return "scissors";
         }
     } 
@@ -68,12 +68,12 @@ function playRound(computerChoice, humanChoice) {
 function playGame() {
     let computerScore = 0;
     let humanScore = 0;
-    let n = ""; 
+    let winner = ""; 
     for (let i = 1; i <=5; i++) {
-        n = playRound(getComputerChoice(), getHumanChoice());
-        if (n === "computer") {
+        winner = playRound(getComputerChoice(), getHumanChoice());
+        if (winner === "computer") {
             computerScore++;
-        }   else if (n === "human") {
+        }   else if (winner === "human") {
             humanScore++;
         }
     }
