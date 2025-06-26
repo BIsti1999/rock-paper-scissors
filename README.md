@@ -1,1 +1,1 @@
-# rock-paper-scrissors
+This project is about building a rock-paper-scrissors program, using JavaScript skills.
